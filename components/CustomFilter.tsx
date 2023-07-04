@@ -15,18 +15,19 @@ import { updateSearchUrl } from '@/utils'
 const CustomFilter = (
   {
     title,
-    options
+    options,
+    setFilter
   } : CustomFilterProps
 ) => {
   const [selected, setSelected] = useState(options[0])
 
-  const router = useRouter()
+  // const router = useRouter()
 
-  const handleUpdateUrl = (e: {title:string, value:string}) => {
-    const newPathName = updateSearchUrl(title, e.value.toLowerCase())
+  // const handleUpdateUrl = (e: {title:string, value:string}) => {
+  //   const newPathName = updateSearchUrl(title, e.value.toLowerCase())
 
-    router.push(newPathName)    
-  }
+  //   router.push(newPathName)    
+  // }
 
   return (
     <div className='w-fit'>
@@ -34,7 +35,7 @@ const CustomFilter = (
         value={selected}
         onChange={(e) => {
           setSelected(e)
-          handleUpdateUrl(e)
+          setFilter(e.value)
         }}
       >
         <div className='relative w-fit z-10'>
