@@ -217,3 +217,19 @@
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
 /* END: search manufacturer styles */
+
+::-webkit-scrollbar {
+  /* Customize the scrollbar width */
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  /* Customize the scrollbar track */
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Customize the scrollbar thumb */
+  background-color: #2C5AFF;
+  border-radius: 10px;
+}
